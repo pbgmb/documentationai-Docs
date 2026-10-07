@@ -1,0 +1,117 @@
+---
+title: Features
+description: Core capabilities of the platform including document management, collaboration, and use cases for project documentation.
+---
+
+## Overview
+
+Lodestone Consulting Ltd's documentation platform empowers you to organize project documentation with ease. Transform complex project details into clear, actionable docs using powerful features like creation tools, real-time collaboration, version tracking, and smart search. Whether managing client restructuring plans or growth strategies, these capabilities streamline your workflow.
+
+<Columns cols={2}>
+  <Card title="Document Management" icon="file-text" href="/guides/document-management">
+    Create, edit, and organize docs for any project phase.
+  </Card>
+  <Card title="Team Collaboration" icon="users" href="/guides/collaboration">
+    Share securely with role-based permissions.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="/guides/versions">
+    Track changes and revert effortlessly.
+  </Card>
+  <Card title="Search & Templates" icon="search" href="/guides/templates">
+    Find content fast and start with pre-built templates.
+  </Card>
+</Columns>
+
+## Document Creation and Editing
+
+Start new documents quickly for project proposals, consulting reports, or MIND/FLOW™ analyses. The editor supports rich markdown, including headings, lists, and embeds.
+
+<Steps>
+  <Step title="Create a New Doc" icon="plus">
+    Navigate to your project space and select `New Document`. Choose a template or start blank.
+  </Step>
+  <Step title="Edit Content" icon="edit-3">
+    Use the markdown editor for structured content. Preview changes in real-time.
+
+````markdown
+## Project Overview
+
+**Client:** Acme Corp  
+**Objective:** Achieve 20% growth via MIND/FLOW™
+
+- Marketing audit complete
+- Innovation pipeline identified
+````
+
+  </Step>
+  <Step title="Publish" icon="upload-cloud">
+    Save and publish to share with your team or clients.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Enable auto-save to prevent data loss during long editing sessions.
+</Callout>
+
+## Collaboration and Permissions
+
+Invite team members or clients to collaborate securely. Assign roles like Viewer, Editor, or Admin.
+
+<Tabs>
+  <Tab title="Team Member" icon="user">
+    Editors can update content and add comments.
+  </Tab>
+  <Tab title="Client Access" icon="shield">
+    Viewers see published versions only, protecting drafts.
+  </Tab>
+  <Tab title="Admin" icon="settings">
+    Manage permissions and project spaces.
+  </Tab>
+</Tabs>
+
+## Version History
+
+Every change creates a version snapshot. Compare diffs and restore previous states.
+
+<Expandable title="View Version Details" default-open="true">
+  Access history via the `Versions` tab. Select a version to preview:
+
+  ```
+  v1.2 - Added growth metrics (2024-10-15)
+  v1.1 - Initial draft (2024-10-10)
+  v1.0 - Created (2024-10-08)
+  ```
+
+  Rollback with one click.
+</Expandable>
+
+## Search and Templates
+
+Quickly search across all project docs. Use built-in templates for common consulting deliverables.
+
+| Feature | Description |
+|---------|-------------|
+| Full-Text Search | Finds keywords in titles, content, and tags |
+| Templates | Restructuring plans, performance audits, MIND/FLOW™ worksheets |
+| Filters | By project, date, or author |
+
+## Project Use Cases
+
+Visualize workflows for typical consulting projects.
+
+<Board title="Consulting Project Workflow">
+  <BoardColumn title="Planning" color="0" icon="calendar">
+    <BoardCard title="Client Onboarding" description="Gather initial data and objectives" icon="user-plus" dueDate="2024-11-01" />
+    <BoardCard title="MIND Audit" description="Apply first four lenses" icon="search" />
+  </BoardColumn>
+  <BoardColumn title="Execution" color="1" icon="zap">
+    <BoardCard title="FLOW Implementation" description="Focus and leadership actions" icon="trending-up" author="Paraic Bergin" />
+  </BoardColumn>
+  <BoardColumn title="Review" color="2" icon="check-circle">
+    <BoardCard title="Growth Report" description="Document results and next steps" createdAt="2024-12-01" />
+  </BoardColumn>
+</Board>
+
+<Callout kind="info">
+  Customize templates for your MIND/FLOW™ system to accelerate project documentation.
+</Callout>

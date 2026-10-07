@@ -1,0 +1,168 @@
+---
+title: Changelog
+description: Version history with 2-3 recent updates, improvements, and release notes.
+---
+
+## Overview
+
+Lodestone Consulting Ltd maintains this changelog to track releases, improvements, and fixes across our documentation platform and MIND/FLOW™ system. You receive notifications for major updates via email. Review breaking changes before upgrading.
+
+<Callout kind="info">
+  Subscribe to our newsletter for release announcements and early access to betas.
+</Callout>
+
+## Recent Releases
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added MIND/FLOW™ dashboard integration for real-time clarity metrics.
+- Introduced customizable lenses for Marketing, Innovation, Numbers, and Differentiation.
+- Enabled FLOW tracking with Focus, Leadership, Opportunity, and Worth modules.
+
+## Improvements
+
+- Enhanced performance by 40% in report generation.
+- Updated UI with brand color `#fc5e2a` accents for better visibility.
+
+## Bug Fixes
+
+- Resolved sync issues between MIND and FLOW sections.
+- Fixed export errors for PDF reports.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Added collaborative editing for team-based clarity sessions.
+- Integrated Forbes Coaches Council badge display in profiles.
+
+## Bug Fixes
+
+- Patched authentication flow for smoother login.
+- Corrected data visualization glitches in Numbers lens.
+
+## Improvements
+
+- Optimized mobile responsiveness for on-the-go access.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## Breaking Changes
+
+- Removed legacy v0.x API endpoints. Migrate to new `/v1/clarity` paths.
+- Updated required Node.js version to `>=18`.
+
+## New Features
+
+- Launched core MIND/FLOW™ system with eight lenses.
+- Added initial dashboard for business owners and CEOs.
+
+## Migration Notes
+
+Follow the steps below to upgrade from v0.x.
+
+</Update>
+
+## Upgrading Your Instance
+
+<Steps>
+  <Step title="Backup Data" icon="database">
+
+    Create a full backup before proceeding.
+
+````bash
+cp -r /path/to/lodestone-data /backup/location
+````
+
+  </Step>
+  <Step title="Update Package" icon="download">
+
+    Use your preferred package manager.
+
+    <CodeGroup tabs="npm,yarn">
+````bash
+npm install lodestone-docs@latest
+````
+````bash
+yarn add lodestone-docs@latest
+````
+    </CodeGroup>
+
+  </Step>
+  <Step title="Run Migrations" icon="settings">
+
+    Execute database migrations.
+
+````bash
+npx lodestone migrate
+````
+
+  </Step>
+  <Step title="Restart Service" icon="refresh-cw">
+
+    Restart your Lodestone instance.
+
+````bash
+systemctl restart lodestone
+# or
+pm2 restart lodestone
+````
+
+  </Step>
+</Steps>
+
+<Callout kind="alert">
+  For v1.0.0 upgrades, review breaking changes and test in staging first.
+</Callout>
+
+## Migration Guide
+
+<Tabs>
+  <Tab title="From v0.x to v1.x" icon="arrow-up">
+
+    Update your config to use new endpoints.
+
+````javascript
+// Old
+const apiUrl = 'https://api.example.com/v0/clarity';
+
+// New
+const apiUrl = 'https://api.example.com/v1/clarity';
+````
+
+  </Tab>
+  <Tab title="Config Changes" icon="settings">
+
+    Replace deprecated options.
+
+    <ParamField path="lenses" param-type="array" required="true">
+      Array of active lenses: `["marketing", "innovation"]`.
+    </ParamField>
+
+    <ParamField body="flowEnabled" param-type="boolean" required="false">
+      Enable FLOW tracking. Defaults to `false`.
+    </ParamField>
+
+  </Tab>
+</Tabs>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Full Release Notes" icon="book-open" href="https://paraicbergin.com/publications">
+    Dive into detailed notes for all versions.
+  </Card>
+  <Card title="Report Issues" icon="bug" href="https://paraicbergin.com/contact" horizontal>
+    Found a bug? Contact support directly.
+  </Card>
+</Columns>
+
+<Expandable title="Upcoming Releases" default-open="false">
+  Watch for v1.3.0 with AI-powered insight generation.
+</Expandable>

@@ -1,0 +1,125 @@
+---
+title: Quickstart
+description: Account setup and first steps to create your documentation workspace and initial project.
+---
+
+## Prerequisites
+
+<Callout kind="info">
+
+Before starting, ensure you have:
+- A valid email address for account creation
+- A modern web browser like Chrome or Firefox
+- Optional: GitHub account for version control integration
+
+</Callout>
+
+## Get Started in Minutes
+
+Follow these steps to set up your Lodestone Consulting Ltd documentation workspace and publish your first page.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Visit `https://docs.lodestoneconsulting.com/signup` and create your account.
+
+    Enter your email, name, and a secure password. Verify your email to activate the account.
+  </Step>
+
+  <Step title="Create Workspace" icon="folder-plus">
+    From the dashboard, click **New Workspace**.
+
+    Name it `Lodestone-Docs` and select **Public** visibility for sharing. Confirm creation.
+  </Step>
+
+  <Step title="Add First Document" icon="file-plus">
+    In your workspace, select **New Page** and title it `Introduction`.
+
+    Paste sample content or use the built-in editor to add your first markdown.
+  </Step>
+
+  <Step title="Organize Structure" icon="layers">
+    Create folders like `guides/`, `api/`, and `changelog/` via the sidebar.
+
+    Drag and drop pages into folders for a clean hierarchy.
+  </Step>
+
+  <Step title="Preview and Publish" icon="eye">
+    Click **Preview** to view live rendering.
+
+    Hit **Publish** to make it live. Share the generated URL with your team.
+  </Step>
+</Steps>
+
+## Sample Document Content
+
+Use this template for your first page. Copy it into the editor.
+
+<CodeGroup tabs="Markdown,MDX">
+```markdown
+# Welcome
+
+Your Lodestone Consulting Ltd documentation starts here.
+```
+````mdx
+---
+title: Welcome
+description: Overview of your docs.
+---
+
+## Quick Overview
+
+Transforming complexity into clarity.
+````
+</CodeGroup>
+
+## Basic Organization Tips
+
+Organize your docs effectively from the start.
+
+<Tabs>
+  <Tab title="Folder Structure" icon="folder">
+    ```
+    docs/
+    ├── introduction.mdx
+    ├── quickstart.mdx
+    ├── services/
+    │   └── mind-flow.mdx
+    └── changelog.mdx
+    ```
+  </Tab>
+
+  <Tab title="Navigation" icon="menu">
+    Use frontmatter for automatic sidebar generation:
+
+    ````mdx
+    ---
+    title: Services
+    sidebar_label: MIND/FLOW™
+    ---
+    ````
+  </Tab>
+</Tabs>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Explore Features" icon="zap" href="/introduction">
+    Dive into advanced editing, versioning, and collaboration tools.
+  </Card>
+
+  <Card title="Customize Theme" icon="palette" href="/configuration">
+    Apply your brand colors like `#fc5e2a` and slogan.
+  </Card>
+
+  <Card title="Integrate GitHub" icon="github" href="/guides">
+    Sync with repositories for seamless workflows.
+  </Card>
+
+  <Card title="Share Workspace" icon="share-2" href="/sharing">
+    Invite team members and set permissions.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Need help? Book a call via your Lodestone dashboard or check the full guides.
+</Callout>
